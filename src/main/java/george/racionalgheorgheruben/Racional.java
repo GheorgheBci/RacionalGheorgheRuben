@@ -16,6 +16,7 @@ public class Racional {
         this.b = 1;
     }
 
+    //Constructor con parametros
     public Racional(int a, int b) {
         this.a = a;
         if (this.b == 0) {
@@ -24,6 +25,7 @@ public class Racional {
 
     }
 
+    //Metodos getter
     public int getA() {
         return a;
     }
@@ -49,11 +51,13 @@ public class Racional {
         System.out.println("Número racional " + a + "/" + b);
     }
 
+    //Método toString
     @Override
     public String toString() {
         return "Racional = " + +a + "/" + b;
     }
 
+    //Método suma
     public void suma(Racional racional1) {
         if (this.b == racional1.getB()) {
             this.a += racional1.getA();
@@ -74,6 +78,7 @@ public class Racional {
         }
     }
 
+    //Método multiplicación
     public void multiuplicacion(Racional racional1) {
         this.a *= racional1.getA();
         this.b *= racional1.getB();
@@ -82,5 +87,14 @@ public class Racional {
     // Método de clase división
     public static double division(Racional racionalX, Racional racionalY) {
         return (racionalX.getA() * racionalY.getB()) / (racionalY.getB() * racionalX.getA());
+    }
+
+    //Método igualdad
+    public static boolean igualdad(Racional racional1, Racional racional2) {
+
+        if (racional1.getA() * racional2.getB() == racional2.getB() * racional1.getA()) {
+
+        }
+        return (racional1 == racional2);
     }
 }
