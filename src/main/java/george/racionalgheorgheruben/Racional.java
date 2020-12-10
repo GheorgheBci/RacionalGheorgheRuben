@@ -23,6 +23,8 @@ public class Racional {
         this.a = a;
         if (this.b == 0) {
             this.b = 1;
+        }else{
+            this.b = b;
         }
 
     }

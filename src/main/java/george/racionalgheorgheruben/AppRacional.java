@@ -21,5 +21,9 @@ public class AppRacional {
 
         // Comparamos usando el método igualdad los dos objetos 
         System.out.println(Racional.igualdad(r1, r2));
+        
+        //Realizamos la llamada z.suma(k)
+        r1.suma(r2);
+        System.out.println(r1);
     }
 }
