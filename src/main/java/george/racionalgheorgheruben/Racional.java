@@ -49,13 +49,22 @@ public class Racional {
         return "Racional = " + +a + "/" + b;
     }
 
-    public void suma(Racional racional1 ) {
+    public void suma(Racional racional1) {
         if (this.b == racional1.getB()) {
             this.a += racional1.getA();
         } else {
-            this.a *= (this.a*racional1.getB()) + (this.b* racional1.getA());
+            this.a *= (this.a * racional1.getB()) + (this.b * racional1.getA());
             this.b *= racional1.getB();
         }
 
+    }
+
+    public void resta(Racional racional) {
+        if (racional.getB() == this.b) {
+            this.a -= racional.getA();
+        } else {
+            this.a = (this.a * racional.getA()) - (this.b * racional.getB());
+            this.b *= racional.getB();
+        }
     }
 }
