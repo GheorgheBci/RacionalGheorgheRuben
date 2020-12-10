@@ -6,9 +6,11 @@ package george.racionalgheorgheruben;
  */
 public class Racional {
 
+    // Atributos de la clase Racional
     private int a;
     private int b;
 
+    // Constructor por defecto
     public Racional() {
         this.a = 1;
         this.b = 1;
@@ -30,16 +32,19 @@ public class Racional {
         return b;
     }
 
+    // Métodos set 
     public void setA(int a) {
         this.a = a;
     }
 
     public void setB(int b) {
+        // Controlamos que si el denominador es 0, se le cambia el valor a un 1
         if (b == 0) {
             this.b = 1;
         }
     }
 
+    // Método imprimiConsola que muestra el valor de a y b
     public void imprimirConsola() {
         System.out.println("Número racional " + a + "/" + b);
     }
@@ -59,6 +64,7 @@ public class Racional {
 
     }
 
+    // Método resta
     public void resta(Racional racional) {
         if (racional.getB() == this.b) {
             this.a -= racional.getA();
@@ -67,8 +73,14 @@ public class Racional {
             this.b *= racional.getB();
         }
     }
-    public void multiuplicacion (Racional racional1){
+
+    public void multiuplicacion(Racional racional1) {
         this.a *= racional1.getA();
         this.b *= racional1.getB();
+    }
+
+    // Método de clase división
+    public static double division(Racional racionalX, Racional racionalY) {
+        return (racionalX.getA() * racionalY.getB()) / (racionalY.getB() * racionalX.getA());
     }
 }
