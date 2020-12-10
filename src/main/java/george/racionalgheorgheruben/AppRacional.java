@@ -14,9 +14,12 @@ public class AppRacional {
 
         //Creamos el Racional con variables aleatorias
         Racional.aleatorio();
-        
+
         r1.imprimirConsola();
         r2.imprimirConsola();
         System.out.println(Racional.aleatorio());
+
+        // Comparamos usando el método igualdad los dos objetos 
+        System.out.println(Racional.igualdad(r1, r2));
     }
 }
