@@ -43,4 +43,19 @@ public class Racional {
     public void imprimirConsola() {
         System.out.println("Número racional " + a + "/" + b);
     }
+
+    @Override
+    public String toString() {
+        return "Racional = " + +a + "/" + b;
+    }
+
+    public void suma(int c, int d) {
+        int suma;
+        if (b == d) {
+            suma = a * d + b * c / b;
+        } else {
+            suma = (a * d + b * c) / b * d;
+        }
+
+    }
 }
