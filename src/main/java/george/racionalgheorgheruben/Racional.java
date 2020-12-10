@@ -16,7 +16,7 @@ public class Racional {
 
     public Racional(int a, int b) {
         this.a = a;
-        if (b == 0) {
+        if (this.b == 0) {
             this.b = 1;
         }
 
@@ -49,12 +49,12 @@ public class Racional {
         return "Racional = " + +a + "/" + b;
     }
 
-    public void suma(int c, int d) {
-        int suma;
-        if (b == d) {
-            suma = a * d + b * c / b;
+    public void suma(Racional racional1 ) {
+        if (this.b == racional1.getB()) {
+            this.a += racional1.getA();
         } else {
-            suma = (a * d + b * c) / b * d;
+            this.a *= (this.a*racional1.getB()) + (this.b* racional1.getA());
+            this.b *= racional1.getB();
         }
 
     }
