@@ -16,10 +16,10 @@ public class Racional {
 
     public Racional(int a, int b) {
         this.a = a;
-        if (b == 0){
+        if (b == 0) {
             this.b = 1;
         }
-        
+
     }
 
     public int getA() {
@@ -30,4 +30,17 @@ public class Racional {
         return b;
     }
 
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public void setB(int b) {
+        if (b == 0) {
+            this.b = 1;
+        }
+    }
+
+    public void imprimirConsola() {
+        System.out.println("Número racional " + a + "/" + b);
+    }
 }
