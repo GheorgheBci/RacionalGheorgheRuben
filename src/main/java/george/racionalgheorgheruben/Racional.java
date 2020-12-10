@@ -67,4 +67,8 @@ public class Racional {
             this.b *= racional.getB();
         }
     }
+    public void multiuplicacion (Racional racional1){
+        this.a *= racional1.getA();
+        this.b *= racional1.getB();
+    }
 }
