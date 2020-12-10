@@ -1,5 +1,7 @@
 package george.racionalgheorgheruben;
 
+import java.util.Random;
+
 /**
  *
  * @author Jorge
@@ -96,5 +98,19 @@ public class Racional {
 
         }
         return (racional1 == racional2);
+    }
+
+    // Métodod de clase aleatorio que devuelve un número racional aleatorio
+    public static int aleatorio() {
+        Random random = new Random();
+
+        int numerador = random.nextInt();
+        int denominador = random.nextInt();
+
+        do {
+            denominador = random.nextInt();
+        } while (denominador == 0);
+
+        return numerador / denominador;
     }
 }
