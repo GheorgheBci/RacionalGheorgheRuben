@@ -100,7 +100,7 @@ public class Racional {
         return (racional1 == racional2);
     }
 
-    // Métodod de clase aleatorio que devuelve un número racional aleatorio
+    // Método de clase aleatorio que devuelve un número racional aleatorio
     public static int aleatorio() {
         Random random = new Random();
 
